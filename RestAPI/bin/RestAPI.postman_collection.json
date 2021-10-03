@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "f29429f2-59de-43eb-ace1-2b66673be49c",
+		"name": "RestAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Server",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "server",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "ip",
+						"value": "192.168.0.1",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "port",
+						"value": "4444",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "https://localhost:8443/addserver?ip=192.168.0.1&port=4444",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"addserver"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "192.168.0.1"
+						},
+						{
+							"key": "port",
+							"value": "4444"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Server",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "client",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8443/removeserver?ip=192.168.0.1&port=4444&accessToken=f3d05d9507ce703ebb59350832983a60",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"removeserver"
+					],
+					"query": [
+						{
+							"key": "ip",
+							"value": "192.168.0.1"
+						},
+						{
+							"key": "port",
+							"value": "4444"
+						},
+						{
+							"key": "accessToken",
+							"value": "f3d05d9507ce703ebb59350832983a60"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Server List",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "client",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "password1234",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:8443/getserverlist",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "8443",
+					"path": [
+						"getserverlist"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,6 @@
+!shell.cmd { cmd:'client-upload', args:'./files/testing/client-screenshot.png' }
+!shell.cmd { cmd:'download', args:'./files/testing/server-screenshot.png' }
+!shell.cmd { cmd:'download', args:'./files/testing/557kb.txt' }
+!shell.cmd { cmd:'screenshot', args:'./files/testing/capture.png' }
+!shell.cmd { cmd:'help' }
+exit_session

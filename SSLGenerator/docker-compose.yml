@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  sslgenerator-build:
+    build:
+      context: .
+    container_name: 'sslgenerator'
+    tty: true
+    restart: 'always'
+    volumes:
+      - ${EXPORT-./export}:/export
